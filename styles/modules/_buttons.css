@@ -1,0 +1,83 @@
+/* _buttons.css */
+.m-btn-tg {
+    transition: background-color .3s ease;
+    background-color: var(--color-subcolor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    border-radius: 100px;
+
+}
+
+.m-btn-tg::after {
+    width: 20px;
+    height: 20px;
+    content: '';
+    display: block;
+    background: url('../../img/icons/telegram-plane.svg') 50% / contain no-repeat;
+}
+
+.m-btn-tg:hover {
+    background-color: var(--color-accent);
+}
+
+.m-btn-call {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    cursor: pointer;
+    padding: 8px 24px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-subcolor);
+    border: 1px solid var(--color-subcolor);
+    border-radius: 12px;
+    transition: background-color .3s ease;
+    flex-shrink: 0;
+}
+
+.m-btn-call:hover {
+    background-color: var(--color-accent);
+}
+
+.m-hero-cta {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 120%;
+    padding: 16px 48px;
+    background-color: var(--color-subcolor);
+    border: 1px solid var(--color-subcolor);
+    position: absolute;
+    bottom: -8px;
+    right: -8px;
+    border-radius: 32px 0 24px 0;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+.m-hero-cta:hover {
+    background-color: var(--color-accent);
+}
+.m-menu-close {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--color-subcolor);
+    background-color: var(--color-subcolor);
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.m-menu-close::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url('../../img/icons/close.svg') 50% / contain no-repeat;
+}

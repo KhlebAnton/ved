@@ -1,0 +1,8 @@
+/* color.css */
+:root {
+    --color-white: #FFFFFF;
+    --color-primary: #1D1D1D;
+    --color-secondary: #464646;
+    --color-subcolor: #F5F5F5;
+    --color-accent: #FFDC7B;
+}

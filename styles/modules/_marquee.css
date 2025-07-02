@@ -1,0 +1,48 @@
+/* marquee.css */
+.m-marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    padding: 20px 0;
+    background-color: var(--color-subcolor);
+}
+
+.m-marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 30s linear infinite;
+    gap: 16px;
+}
+
+.m-marquee-content {
+    display: flex;
+    gap: 16px;
+}
+
+.m-marquee-item {
+    white-space: nowrap;
+    font-size: 20px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-weight: 600;
+}
+
+.m-marquee-item::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    background: url('../../img/star_bl.svg') 50% / contain no-repeat;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}

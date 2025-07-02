@@ -1,0 +1,41 @@
+/* _about */
+.m-about-title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 120%;
+    text-align: center;
+}
+
+.m-highlighted-word-double {
+    position: relative;
+}
+
+.m-highlighted-word {
+    position: relative;
+    display: inline-block;
+}
+
+.m-highlighted-word::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    right: -6px;
+    left: -6px;
+    border-radius: 12px;
+    background-color: var(--color-accent);
+}
+
+.m-highlighted-word-double::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    right: -6px;
+    left: -6px;
+    border-radius: 12px;
+    background-color: var(--color-accent);
+    opacity: 0;
+}

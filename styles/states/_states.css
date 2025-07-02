@@ -1,0 +1,23 @@
+/* States.css  */
+.is-hidden {
+    display: none;
+}
+
+.m-highlighted-word.is-rotate-one::before {
+    transform: rotate(2.12deg);
+}
+
+.m-highlighted-word.is-rotate-two::before {
+    transform: rotate(1.13deg);
+}
+
+.m-highlighted-word.is-rotate-three::before {
+    transform: rotate(1.71deg);
+}
+.l-menu-mobile.is-open {
+    opacity: 1;
+    pointer-events: all;
+}
+.m-menu.is-open {
+    transform: translateX(0%);
+}
