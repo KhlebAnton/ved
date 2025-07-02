@@ -1,18 +1,18 @@
-@import 'base/_color.css';
-@import 'base/_base.css';
+@import './base/_color.css';
+@import './base/_base.css';
 
-@import 'layout/_layout.css';
+@import './layout/_layout.css';
 
-@import 'modules/_buttons.css';
-@import 'modules/_hero.css';
-@import 'modules/_header.css';
-@import 'modules/_marquee.css';
-@import 'modules/_about.css';
-@import 'modules/_video.css';
+@import './modules/_buttons.css';
+@import './modules/_hero.css';
+@import './modules/_header.css';
+@import './modules/_marquee.css';
+@import './modules/_about.css';
+@import './modules/_video.css';
 
-@import 'states/_states.css';
+@import './states/_states.css';
 
-@import 'themes/_theme.css';
+@import './themes/_theme.css';
 
 
 
