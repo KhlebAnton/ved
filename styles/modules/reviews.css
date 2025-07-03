@@ -1,0 +1,142 @@
+ .m-reviews-container {
+     position: relative;
+     margin-top: 60px;
+     width: 100%;
+     overflow: hidden;
+ }
+.m-reviews-section {
+    overflow: hidden;
+}
+ .m-reviews {
+     width: 100%;
+    overflow: hidden;
+   
+    box-sizing: border-box;
+ }
+
+ .m-reviews-swiper-wrapper {
+     align-items: start;
+ }
+
+ .m-reviews .m-reviews-swiper-slide.swiper-slide {
+     width: 100%;
+     max-width: 533px;
+     transition: all 0.3s ease;
+     background: var(--color-subcolor);
+     border-radius: 16px;
+     padding: 32px;
+     height: auto;
+     opacity: 0.5;
+ }
+
+ .m-reviews .m-reviews-swiper-slide.swiper-slide-active {
+     opacity: 1;
+ }
+
+ .m-review-content {
+     display: -webkit-box;
+     -webkit-line-clamp: 6;
+     -webkit-box-orient: vertical;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     position: relative;
+
+     line-height: 1.5;
+     max-height: calc(1.5em * 6);
+     /* 6 строк */
+
+     font-weight: 600;
+     font-size: 16px;
+     line-height: 20px;
+ }
+
+ .m-review-content p+p::before {
+     content: "*";
+     opacity: 0;
+     display: block;
+     line-height: .5em;
+
+ }
+
+ .m-review-content.expanded {
+     display: block;
+     -webkit-line-clamp: initial;
+     max-height: none;
+ }
+
+ .expand-button {
+     color: var(--color-blue);
+     cursor: pointer;
+
+     font-weight: 600;
+     font-size: 16px;
+     line-height: 20px;
+ }
+
+ .expand-button.hidden {
+     display: none;
+ }
+
+ .m-reviews-date {
+     font-weight: 500;
+     font-size: 16px;
+     line-height: 20px;
+     opacity: .8;
+     margin-bottom: 16px;
+ }
+
+ .m-reviews-info {
+     display: flex;
+     flex-direction: column;
+     margin-top: 28px;
+     gap: 8px;
+ }
+
+ .m-reviews-name {
+     font-weight: 600;
+     font-size: 20px;
+     line-height: 24px;
+ }
+
+ .m-reviews-company {
+     font-weight: 500;
+     font-size: 16px;
+     line-height: 20px;
+ }
+
+ @media (max-width:1200px) {
+     .m-reviews-container {
+         margin-top: 32px;
+     }
+ }
+
+ @media (max-width:760px) {
+     .m-reviews-container {
+         margin-top: 20px;
+     }
+     .m-reviews .m-reviews-swiper-slide.swiper-slide {
+        padding: 12px;
+     }
+      .m-reviews {
+        padding: 0 12px ;
+      }
+      .m-reviews-company,
+      .expand-button,
+      .m-review-content,
+     .m-reviews-date {
+        font-size: 14px;
+        line-height: 20px;
+     }
+      .m-reviews-section h2{
+        max-width: 250px;
+        text-align: start;
+      }
+      .m-reviews-name {
+        font-size: 16px;
+        line-height: 24px;
+      }
+      .m-reviews-info {
+        margin-top: 16px;
+        gap: 6px;
+      }
+ }
