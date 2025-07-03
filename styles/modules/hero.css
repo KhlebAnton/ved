@@ -1,0 +1,154 @@
+/* _hero.css */
+.m-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.m-hero-content {
+    min-height: 700px;
+    width: 100%;
+    border-radius: 24px;
+    border: 8px solid var(--color-subcolor);
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.m-hero-bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -2;
+    overflow: hidden;
+     border-radius: 24px;
+}
+
+.m-hero-star {
+    position: absolute;
+    top: -8px;
+    left: 10px;
+    width: 816px;
+    aspect-ratio: 1 / 1;
+    background: url('../../img/star.png') 50% / contain no-repeat;
+    z-index: -2;
+
+}
+
+.m-hero-img {
+    position: absolute;
+    width: 623px;
+    height: 651px;
+    left: 107px;
+    top: 101px;
+    z-index: 1;
+    background: url('../../img/alex.png') 50% / contain no-repeat;
+}
+
+.m-hero-title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 120%;
+    padding: 16px 32px;
+    background-color: var(--color-subcolor);
+    position: absolute;
+    top: -8px;
+    left: -8px;
+
+    border-radius: 24px 0 32px 0;
+}
+.m-hero-text {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 32px;
+    margin-top: 284px;
+    margin-left: auto;
+    margin-right: 54px;
+    max-width: 451px;
+    width: 100%;
+
+}
+
+@media (max-width:1200px) {
+    .m-hero-img {
+        right: auto;
+        left: -32px;
+    }
+
+    .m-hero-star {
+        width: 700px;
+        left: -71px;
+        background: url(../img/star.png) 50% / contain no-repeat;
+    }
+
+    .m-hero-title {
+        font-size: 32px;
+        padding: 16px 24px;
+    }
+
+    .m-hero-text {
+        margin-top: 149px;
+        margin-right: 40px;
+        max-width: 323px;
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .m-about-title {
+        font-size: 32px;
+    }
+
+}
+
+@media (max-width:760px) {
+    
+   
+    .m-hero-content {
+        min-height: 410px;
+        margin-bottom: 26px;
+        border-width: 2px;
+        border-radius: 16px;
+    }
+    .m-hero-img {
+        top: 109px;
+        left: -53px;
+        width: 310.94px;
+        height: 325px;
+    }
+        .m-hero-star {
+        top: 69px;
+        left: -119px;
+        width: 404px;
+    }
+    .m-hero-bg {
+        top: -2px;
+        right: -2px;
+        left: -2px;
+        bottom: -2px;
+        border-radius: 16px;
+    }
+    .m-hero-title {
+        font-size: 16px;
+        line-height: 20px;
+        padding: 10px 16px;
+        left: -2px;
+        top: -2px;
+        border-radius: 16px 0 16px 0;
+    }
+    .m-hero-text {
+        margin-top: 55px;
+        max-width: 296px;
+        margin-right: auto;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: center;
+        padding: 0 16px;
+    }
+    .m-hero-cta {
+        font-size: 16px;
+        bottom: -2px;
+        right: -2px;
+        padding: 10px 16px;
+        border-radius: 16px 0 16px 0 ;
+    }
+}

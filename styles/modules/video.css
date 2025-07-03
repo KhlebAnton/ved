@@ -50,3 +50,26 @@
     line-height: 20px;
     flex-shrink: 0;
 }
+
+@media (max-width:760px) {
+ 
+  
+    .m-video {
+        height: 238px;
+    }
+    .m-video-control {
+        gap: 6px;
+    }
+    .m-video-control-play {
+        width: 28px;
+        height: 28px;
+    }
+     .m-video-control-play::after {
+        width: 16px;
+        height: 16px;
+     }
+     .m-video-text {
+        font-size: 12px;
+        line-height: 20px;
+     }
+}

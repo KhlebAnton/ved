@@ -1,22 +1,5 @@
 /* _header.css */
-.m-humburger {
-    width: 40px;
-    height: 40px;
-    border-radius: 100px;
-    background-color: var(--color-subcolor);
-    margin-left: auto;
-    display: none;
-    
-    align-items: center;
-    justify-content: center;
-}
-.m-humburger::after {
-    content: '';
-    display: block;
-    width: 20px;
-    height: 10px;
-    background: url('../../img/menu.svg') 50% / contain no-repeat;
-}
+
 .l-menu-mobile {
     position: fixed;
     top: 0;
@@ -91,4 +74,17 @@
 
 .m-nav-item:hover {
     color: var(--color-accent);
+}
+@media (max-width:1200px) {
+    
+    .m-nav {
+        gap: 16px;
+    }
+}
+@media (max-width:760px) {
+    
+    .m-header-content {
+        display: none;
+    }
+    
 }

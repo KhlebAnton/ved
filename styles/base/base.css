@@ -59,3 +59,10 @@ button {
     color: inherit;
     background-color: inherit;
 }
+
+@media (max-width:1000px) {
+    :root {
+        --container-padding: 12px;
+    }
+
+}

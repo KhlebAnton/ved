@@ -81,3 +81,28 @@
     height: 20px;
     background: url('../../img/icons/close.svg') 50% / contain no-repeat;
 }
+.m-humburger {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    background-color: var(--color-subcolor);
+    margin-left: auto;
+    display: none;
+    
+    align-items: center;
+    justify-content: center;
+}
+.m-humburger::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 10px;
+    background: url('../../img/menu.svg') 50% / contain no-repeat;
+}
+@media (max-width:760px) {
+    
+    
+    .m-humburger {
+        display: flex;
+    }
+}

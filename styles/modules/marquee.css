@@ -46,3 +46,13 @@
         transform: translateX(-50%);
     }
 }
+@media (max-width:760px) {
+    
+    .m-marquee-item {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .m-marquee-container {
+        padding: 10px 0;
+    }
+}

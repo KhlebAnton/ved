@@ -27,3 +27,26 @@
     grid-template-columns: 1fr;
     gap: 60px;
 }
+
+@media (max-width:1200px) {
+     .l-grid-row {
+        gap: 32px;
+    }
+}
+@media (max-width:760px) {
+    .l-header {
+        position: absolute;
+        top: 12px;
+        left: 0;
+        right: 0;
+        z-index: 9;
+        padding-top: 0;
+    }
+     .l-grid-row {
+        gap: 20px;
+    }
+    .l-main {
+        margin-top: 12px;
+        gap: 60px;
+    }
+}
