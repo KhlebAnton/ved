@@ -2,7 +2,7 @@ const humburgerBtn = document.querySelector('.m-humburger');
 const closeMenuBtn = document.querySelector('.m-menu-close');
 const menuMobile = document.querySelector('.l-menu-mobile');
 const menuMobileContent = document.querySelector('.m-menu');
-const menuLinks = menuMobileContent.querySelectorAll('.m-nav-item');
+const menuLinks = menuMobileContent.querySelectorAll('a');
 humburgerBtn.addEventListener('click', openMenu);
 
 closeMenuBtn.addEventListener('click', closeMenu);
