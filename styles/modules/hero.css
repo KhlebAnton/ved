@@ -78,7 +78,7 @@
     .m-hero-star {
         width: 700px;
         left: -71px;
-        background: url(../img/star.png) 50% / contain no-repeat;
+        background: url('../../img/star.png') 50% / contain no-repeat;
     }
 
     .m-hero-title {
@@ -94,9 +94,7 @@
         line-height: 20px;
     }
 
-    .m-about-title {
-        font-size: 32px;
-    }
+   
 
 }
 

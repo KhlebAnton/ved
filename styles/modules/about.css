@@ -50,6 +50,11 @@
         opacity: 1;
     }
 }
+@media (max-width:1200px) {
+     .m-about-title {
+        font-size: 32px;
+    }
+}
 @media (max-width:760px) {
  
     .m-about-title {
