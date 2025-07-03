@@ -2,3 +2,18 @@
 .t-flex-grow-up {
     flex-grow: 1;
 }
+.t-color-about-1 {
+    background-color: var(--color-about-1);
+}
+.t-color-about-2 {
+    background-color: var(--color-about-2);
+    
+}
+.t-color-about-3 {
+    background-color: var(--color-about-3);
+    
+}
+.t-color-about-4 {
+    background-color: var(--color-about-4);
+    
+}

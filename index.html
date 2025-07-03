@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Алексей Соколов</title>
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
     <!-- base -->
     <link rel="stylesheet" href="./styles/base/base.css">
@@ -18,6 +20,7 @@
     <link rel="stylesheet" href="./styles/modules/hero.css">
     <link rel="stylesheet" href="./styles/modules/marquee.css">
     <link rel="stylesheet" href="./styles/modules/video.css">
+    <link rel="stylesheet" href="./styles/modules/portfolio.css">
     <!-- states -->
     <link rel="stylesheet" href="./styles/states/states.css">
     <!-- themes -->
@@ -28,33 +31,33 @@
 
 <body>
     <div class="l-menu-mobile">
-            <div class="m-menu">
-                <div class="m-menu-top">
-                    <div class="m-menu-title">
-                        Алексей Соколов
-                    </div>
-                    <button class="m-menu-close"></button>
+        <div class="m-menu">
+            <div class="m-menu-top">
+                <div class="m-menu-title">
+                    Алексей Соколов
                 </div>
-                <nav class="m-menu-nav">
-                    <a href="#" class="m-nav-item">
-                        Портфолио
-                    </a>
-                    <a href="#" class="m-nav-item">
-                        Стоимость
-                    </a>
-                    <a href="#" class="m-nav-item">
-                        Отзывы
-                    </a>
-                    <a href="#" class="m-nav-item">
-                        Вопросы и ответы
-                    </a>
-                </nav>
-                <div class="m-menu-bottom">
-                    <button class="m-btn-call t-flex-grow-up">Заказать звонок</button>
-                    <a href="#" class="m-btn-tg"></a>
-                </div>
+                <button class="m-menu-close"></button>
+            </div>
+            <nav class="m-menu-nav">
+                <a href="#" class="m-nav-item">
+                    Портфолио
+                </a>
+                <a href="#" class="m-nav-item">
+                    Стоимость
+                </a>
+                <a href="#" class="m-nav-item">
+                    Отзывы
+                </a>
+                <a href="#" class="m-nav-item">
+                    Вопросы и ответы
+                </a>
+            </nav>
+            <div class="m-menu-bottom">
+                <button class="m-btn-call t-flex-grow-up">Заказать звонок</button>
+                <a href="#" class="m-btn-tg"></a>
             </div>
         </div>
+    </div>
     <header class="l-header is-scrolled">
 
         <div class="m-header-content">
@@ -76,7 +79,7 @@
             <a href="#" class="m-btn-tg"></a>
         </div>
         <button class="m-humburger"></button>
-        
+
 
     </header>
 
@@ -142,14 +145,295 @@
                         </div>
                         <video class="m-video" src="./video/video.mp4" poster="./video/prev.png" playsinline></video>
                     </div>
+                    <div class="m-about-grid">
+                        <div class="m-about-item">
+                            <div class="m-about-item-icon t-color-about-1">
+                                <img class="m-about-item-img" src="./img/about/1.svg">
+                            </div>
+                            <div class="m-about-item-text">
+
+                                Продумываю всё до деталей — от первой реплики до финального аплодисмента. Драйв,
+                                динамика, эффект «вау».
+
+                            </div>
+                        </div>
+                        <div class="m-about-item">
+                            <div class="m-about-item-icon t-color-about-2">
+                                <img class="m-about-item-img" src="./img/about/2.svg">
+                            </div>
+                            <div class="m-about-item-text">
+
+                                Я не просто веду — двигаюсь, зажигаю, вовлекаю. Танцпол оживает со мной.
+
+                            </div>
+                        </div>
+                        <div class="m-about-item">
+                            <div class="m-about-item-icon t-color-about-3">
+                                <img class="m-about-item-img" src="./img/about/3.svg">
+                            </div>
+                            <div class="m-about-item-text">
+
+                                Без опозданий, без фейлов. Чувствую момент, держу темп, подаю вовремя.
+
+                            </div>
+                        </div>
+                        <div class="m-about-item">
+                            <div class="m-about-item-icon t-color-about-4">
+                                <img class="m-about-item-img" src="./img/about/4.svg">
+                            </div>
+                            <div class="m-about-item-text">
+
+                                Праздник включается с первой минуты. Я умею зажечь и держать волну до конца.
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
         </section>
+        <section class="m-portfolio">
+            <div class="l-container">
+                <div class="m-grid-portfolio">
+                    <div class="m-portfolio-top">
+                        <h2 class="m-portfolio-title">
+                            Провожу мероприятия любой сложности: свадьбы, корпоративы, фестивали
+                        </h2>
+                        <p class="m-portfolio-text">
+                            Визуализируйте времяпрепровождение, пока я помогаю вам его воплотить
+                        </p>
+                    </div>
+                    <div class="m-portfolio-tabs-container">
+                        <div class="m-portfolio-tab is-active" data-tab="all">
+                            <div class="m-portfolio-tab-icon">
+                                <img src="./img/portfolio/icons/all-events.svg" alt="Все"
+                                    class="m-portfolio-tab-icon-img" />
+                            </div>
+                            <div class="m-portfolio-tab-title">Все</div>
+                        </div>
+                        <div class="m-portfolio-tab" data-tab="corporate">
+                            <div class="m-portfolio-tab-icon">
+                                <img src="./img/portfolio/icons/corporate-events-.svg" alt="Корпоративы"
+                                    class="m-portfolio-tab-icon-img" />
+                            </div>
+                            <div class="m-portfolio-tab-title">Корпоративы</div>
+                        </div>
+                        <div class="m-portfolio-tab" data-tab="festivals">
+                            <div class="m-portfolio-tab-icon">
+                                <img src="./img/portfolio/icons/festivals-.svg" alt="Фестивали"
+                                    class="m-portfolio-tab-icon-img" />
+                            </div>
+                            <div class="m-portfolio-tab-title">Фестивали</div>
+                        </div>
+                        <div class="m-portfolio-tab" data-tab="weddings">
+                            <div class="m-portfolio-tab-icon">
+                                <img src="./img/portfolio/icons/weddings-.svg" alt="Свадьбы"
+                                    class="m-portfolio-tab-icon-img" />
+                            </div>
+                            <div class="m-portfolio-tab-title">Свадьбы</div>
+                        </div>
+                        <div class="m-portfolio-tab" data-tab="memorial">
+                            <div class="m-portfolio-tab-icon">
+                                <img src="./img/portfolio/icons/memorial.svg" alt="Поминки"
+                                    class="m-portfolio-tab-icon-img" />
+                            </div>
+                            <div class="m-portfolio-tab-title">Поминки</div>
+                        </div>
+                    </div>
+                    <div class="m-portfolio-container">
+                        <div class="m-portfolio-slider-wrapper">
+                            <div class="swiper m-portfolio-slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide" data-tab="corporate">
+                                        <div class="m-portfolio-slide">
+                                            <div class="m-portfolio-slide-left">
+                                                <h3 class="m-portfolio-slide-title">
+                                                    День города Москвы
+                                                </h3>
+                                                <p class="m-portfolio-slide-text">
+                                                    Продумываю всё до деталей — от первой реплики до финального
+                                                    аплодисмента. Драйв, динамика, эффект «вау».
+                                                </p>
+                                            </div>
+                                            <div class="m-portfolio-slide-right">
+                                                <div class="swiper m-image-slider">
+                                                    <div class="m-image-slider-swiper-wrapper swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            <img class="m-image-slider-img"
+                                                                src="./img/portfolio/img/corporat1.png" alt="corp2" />
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <img class="m-image-slider-img"
+                                                                src="./img/portfolio/img/corporat2.png" alt="corp2" />
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <img class="m-image-slider-img"
+                                                                src="./img/portfolio/img/corporat3.png" alt="corp2" />
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <img class="m-image-slider-img"
+                                                                src="./img/portfolio/img/corporat4.png" alt="corp2" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide" data-tab="festivals">
+                                        <div class="m-portfolio-slide">
+                                            <div class="m-portfolio-slide-left">
+                                                <h3 class="m-portfolio-slide-title">
+                                                    Фестиваль народной песни
+                                                </h3>
+                                                <p class="m-portfolio-slide-text">
+                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                                    Dignissimos adipisci illum maiores deleniti illo beatae animi
+                                                   
+                                                </p>
+                                            </div>
+                                            <div class="m-portfolio-slide-right">
+                                                <div class="swiper m-image-slider">
+                                                    <div class="m-image-slider-swiper-wrapper swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            <img class="m-image-slider-img"
+                                                                src="./img/portfolio/img/corporat2.png" alt="corp2" />
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <img class="m-image-slider-img"
+                                                                src="./img/portfolio/img/corporat2.png" alt="corp2" />
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <img class="m-image-slider-img"
+                                                                src="./img/portfolio/img/corporat2.png" alt="corp2" />
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <img class="m-image-slider-img"
+                                                                src="./img/portfolio/img/corporat2.png" alt="corp2" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide" data-tab="weddings">
+                                        <div class="m-portfolio-slide">
+                                            <div class="m-portfolio-slide-left">
+                                                <h3 class="m-portfolio-slide-title">
+                                                   Свадьба Ивановы
+                                                </h3>
+                                                <p class="m-portfolio-slide-text">
+                                                    Нужно боллее 2 фото. Ибо не переключаются 
+                                                    
+                                                </p>
+                                            </div>
+                                            <div class="m-portfolio-slide-right">
+                                                <div class="swiper m-image-slider">
+                                                    <div class="m-image-slider-swiper-wrapper swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            <img class="m-image-slider-img"
+                                                                src="./img/portfolio/img/corporat2.png" alt="corp2" />
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <img class="m-image-slider-img"
+                                                                src="./img/portfolio/img/corporat2.png" alt="corp2" />
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide" data-tab="weddings">
+                                        <div class="m-portfolio-slide">
+                                            <div class="m-portfolio-slide-left">
+                                                <h3 class="m-portfolio-slide-title">
+                                                   Свадьба Петровы
+                                                </h3>
+                                                <p class="m-portfolio-slide-text">
+                                                   Ну или одну норм фотку
+                                                    
+                                                </p>
+                                            </div>
+                                            <div class="m-portfolio-slide-right">
+                                                <div class="swiper m-image-slider">
+                                                    <div class="m-image-slider-swiper-wrapper swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            <img class="m-image-slider-img"
+                                                                src="./img/portfolio/img/corporat2.png" alt="corp2" />
+                                                        </div>
+                                                        
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide" data-tab="memorial">
+                                        <div class="m-portfolio-slide">
+                                            <div class="m-portfolio-slide-left">
+                                                <h3 class="m-portfolio-slide-title">
+                                                   Поминки
+                                                </h3>
+                                                <p class="m-portfolio-slide-text">
+                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                                    Dignissimos adipisci illum maiores deleniti illo beatae animi
+                                                   
+                                                </p>
+                                            </div>
+                                            <div class="m-portfolio-slide-right">
+                                                <div class="swiper m-image-slider">
+                                                    <div class="m-image-slider-swiper-wrapper swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            <img class="m-image-slider-img"
+                                                                src="./img/portfolio/img/corporat2.png" alt="corp2" />
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <img class="m-image-slider-img"
+                                                                src="./img/portfolio/img/corporat2.png" alt="corp2" />
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <img class="m-image-slider-img"
+                                                                src="./img/portfolio/img/corporat2.png" alt="corp2" />
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <img class="m-image-slider-img"
+                                                                src="./img/portfolio/img/corporat2.png" alt="corp2" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="m-portfolio-control-wrapper">
+                                <div class="m-portfolio-progressbar">
+                                    <div class="progress"></div>
+                                </div>
+
+                                <div class="m-portfolio-controls">
+                                    <div class="m-portfolio-btn-prev"></div>
+                                    <div class="m-portfolio-counter">
+                                        <span class="current">1</span> из <span class="total">1</span>
+                                    </div>
+                                    <div class="m-portfolio-btn-next"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <script src="./scripts/header.js"></script>
     <script src="./scripts/marquee.js"></script>
     <script src="./scripts/video-player.js"></script>
+    <script src="./scripts/portfolio.js"></script>
 </body>
 
 </html>

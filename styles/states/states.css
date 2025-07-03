@@ -21,6 +21,9 @@
 .m-menu.is-open {
     transform: translateX(0%);
 }
+.m-portfolio-tab.is-active {
+    background-color: var(--color-accent);
+}
 
 @media (max-width:1350px) {
     .m-highlighted-word.is-rotate-one::before,
