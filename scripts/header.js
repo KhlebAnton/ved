@@ -2,7 +2,7 @@ const humburgerBtn = document.querySelector('.m-humburger');
 const closeMenuBtn = document.querySelector('.m-menu-close');
 const menuMobile = document.querySelector('.l-menu-mobile');
 const menuMobileContent = document.querySelector('.m-menu');
-
+const menuLinks = menuMobileContent.querySelectorAll('.m-nav-item');
 humburgerBtn.addEventListener('click', openMenu);
 
 closeMenuBtn.addEventListener('click', closeMenu);
@@ -16,7 +16,9 @@ function closeMenu() {
     menuMobileContent.classList.remove('is-open');
     toggleNoScroll()
 }
-
+menuLinks.forEach(link => {
+    link.addEventListener('click', closeMenu)
+})
 function toggleNoScroll() {
     const body = document.body;
     const html = document.documentElement;
