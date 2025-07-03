@@ -56,6 +56,9 @@
         font-size: 32px;
     
 }
+.m-highlighted-title br {
+    display: none;
+}
 }
 
 @media (max-width:760px) {

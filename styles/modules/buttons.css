@@ -96,7 +96,7 @@
     content: '';
     display: block;
     width: 20px;
-    height: 10px;
+    height: 20px;
     background: url('../../img/menu.svg') 50% / contain no-repeat;
 }
 @media (max-width:760px) {
