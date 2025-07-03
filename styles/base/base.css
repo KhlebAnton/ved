@@ -43,11 +43,10 @@ html {
     background-color: var(--color-white);
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     color: var(--color-primary);
-}
-
-body {
     scroll-behavior: smooth;
 }
+
+
 
 a {
     color: inherit;

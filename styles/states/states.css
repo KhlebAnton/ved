@@ -1,4 +1,7 @@
 /* States.css  */
+.is-no-scrolled {
+    overflow: hidden;
+}
 .is-hidden {
     display: none;
 }

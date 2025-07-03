@@ -226,7 +226,11 @@
     transform: scale(1);
     opacity: 1;
 }
-
+.m-image-slider .swiper-slide.swiper-slide-prev {
+    transform: scale(0) translateX(200%);
+    transition: transform 1s ease-in-out, opacity .3s ease-out;
+    
+}
 .m-image-slider .swiper-slide {
     width: 392px;
     height: 247px;
