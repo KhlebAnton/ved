@@ -14,6 +14,7 @@
     <!-- layout -->
     <link rel="stylesheet" href="./styles/layout/layout.css">
     <!-- modules -->
+    <link rel="stylesheet" href="./styles/modules/highlighted.css">
     <link rel="stylesheet" href="./styles/modules/about.css">
     <link rel="stylesheet" href="./styles/modules/buttons.css">
     <link rel="stylesheet" href="./styles/modules/header.css">
@@ -21,6 +22,7 @@
     <link rel="stylesheet" href="./styles/modules/marquee.css">
     <link rel="stylesheet" href="./styles/modules/video.css">
     <link rel="stylesheet" href="./styles/modules/portfolio.css">
+    <link rel="stylesheet" href="./styles/modules/cards.css">
     <!-- states -->
     <link rel="stylesheet" href="./styles/states/states.css">
     <!-- themes -->
@@ -53,7 +55,7 @@
                 </a>
             </nav>
             <div class="m-menu-bottom">
-                <button class="m-btn-call t-flex-grow-up">Заказать звонок</button>
+                <button class="m-btn t-flex-grow-up">Заказать звонок</button>
                 <a href="#" class="m-btn-tg"></a>
             </div>
         </div>
@@ -75,7 +77,7 @@
                     Вопросы и ответы
                 </a>
             </nav>
-            <button class="m-btn-call ">Заказать звонок</button>
+            <button class="m-btn ">Заказать звонок</button>
             <a href="#" class="m-btn-tg"></a>
         </div>
         <button class="m-humburger"></button>
@@ -117,13 +119,13 @@
         <section class="m-about">
             <div class="l-container">
                 <div class="l-grid-row">
-                    <h2 class="m-about-title">
+                    <h2 class="m-highlighted-title">
                         «Каждое событие — как кино, где вы
                         <span class="m-highlighted-word-double">
-                            <span class="m-highlighted-word is-rotate-one">
+                            <span class="m-highlighted-word is-rotate-one is-highighlighted-hidden">
                                 главные
                             </span>
-                            <span class="m-highlighted-word is-rotate-two">
+                            <span class="m-highlighted-word is-rotate-two is-highighlighted-hidden">
                                 герои.
                             </span>
                         </span>
@@ -289,7 +291,7 @@
                                                 <p class="m-portfolio-slide-text">
                                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                                                     Dignissimos adipisci illum maiores deleniti illo beatae animi
-                                                   
+
                                                 </p>
                                             </div>
                                             <div class="m-portfolio-slide-right">
@@ -320,11 +322,11 @@
                                         <div class="m-portfolio-slide">
                                             <div class="m-portfolio-slide-left">
                                                 <h3 class="m-portfolio-slide-title">
-                                                   Свадьба Ивановы
+                                                    Свадьба Ивановы
                                                 </h3>
                                                 <p class="m-portfolio-slide-text">
-                                                    Нужно боллее 2 фото. Ибо не переключаются 
-                                                    
+                                                    Нужно боллее 2 фото. Ибо не переключаются
+
                                                 </p>
                                             </div>
                                             <div class="m-portfolio-slide-right">
@@ -338,7 +340,7 @@
                                                             <img class="m-image-slider-img"
                                                                 src="./img/portfolio/img/corporat2.png" alt="corp2" />
                                                         </div>
-                                                        
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -348,11 +350,11 @@
                                         <div class="m-portfolio-slide">
                                             <div class="m-portfolio-slide-left">
                                                 <h3 class="m-portfolio-slide-title">
-                                                   Свадьба Петровы
+                                                    Свадьба Петровы
                                                 </h3>
                                                 <p class="m-portfolio-slide-text">
-                                                   Ну или одну норм фотку
-                                                    
+                                                    Ну или одну норм фотку
+
                                                 </p>
                                             </div>
                                             <div class="m-portfolio-slide-right">
@@ -362,8 +364,8 @@
                                                             <img class="m-image-slider-img"
                                                                 src="./img/portfolio/img/corporat2.png" alt="corp2" />
                                                         </div>
-                                                        
-                                                        
+
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -373,12 +375,12 @@
                                         <div class="m-portfolio-slide">
                                             <div class="m-portfolio-slide-left">
                                                 <h3 class="m-portfolio-slide-title">
-                                                   Поминки
+                                                    Поминки
                                                 </h3>
                                                 <p class="m-portfolio-slide-text">
                                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                                                     Dignissimos adipisci illum maiores deleniti illo beatae animi
-                                                   
+
                                                 </p>
                                             </div>
                                             <div class="m-portfolio-slide-right">
@@ -427,6 +429,83 @@
                 </div>
             </div>
         </section>
+        <div class="m-cards">
+            <div class="l-container">
+                <div class="l-grid-row">
+                    <h2 class="m-highlighted-title t-aligin-left">
+                        Мне можно
+                        <span class="m-highlighted-word is-rotate-one">
+                            доверить
+                        </span>
+                        мероприятие любой сложности:
+                    </h2>
+                    <div class="m-cards-container">
+
+                        <div class="m-card">
+                            <div class="m-card-top">
+                                <div class="m-card-hint-bubble">Начальный</div>
+                            </div>
+                            <div class="m-card-info">
+                                <h3 class="m-card-title">
+                                    Пакет Light
+                                </h3>
+                                <p class="m-card-text">
+                                    Продумываю всё до деталей — от первой реплики до финального аплодисмента. Драйв,
+                                    динамика, эффект «вау».
+                                </p>
+                                <p class="m-card-subtext">
+                                    Ведущий — 3 часа | Велком — 1 час
+                                </p>
+                            </div>
+                            <img src="./img/cards/img/1.png" alt="Начальный" class="m-card-img">
+                            <button class="m-btn t-btn-card t-btn-white">Заказать — от 13 299 ₽</button>
+                        </div>
+
+                        <div class="m-card">
+                            <div class="m-card-top">
+                                <div class="m-card-hint-hot ">Спрос</div>
+                                <div class="m-card-hint-bubble">Продвинутый</div>
+                            </div>
+                            <div class="m-card-info">
+                                <h3 class="m-card-title m-highlighted-word">
+                                    Пакет Standard
+                                </h3>
+                                <p class="m-card-text">
+                                    Продумываю всё до деталей — от первой реплики до финального аплодисмента. Драйв,
+                                    динамика, эффект «вау».
+                                </p>
+                                <p class="m-card-subtext">
+                                    Ведущий — 3 часа | Велком — 1 час
+                                </p>
+                            </div>
+                            <img src="./img/cards/img/2.png" alt="Продвинутый" class="m-card-img">
+                            <button class="m-btn t-btn-card t-btn-white t-btn-hot">Заказать — от 24 999 ₽</button>
+                        </div>
+
+                        <div class="m-card">
+                            <div class="m-card-top">
+                                <div class="m-card-hint-bubble">Премиальный</div>
+                            </div>
+                            <div class="m-card-info">
+                                <h3 class="m-card-title">
+                                    Пакет Premium
+                                </h3>
+                                <p class="m-card-text">
+                                    Продумываю всё до деталей — от первой реплики до финального аплодисмента. Драйв,
+                                    динамика, эффект «вау».
+                                </p>
+                                <p class="m-card-subtext">
+                                    Ведущий — 3 часа | Велком — 1 час
+                                </p>
+                            </div>
+                            <img src="./img/cards/img/3.png" alt="Премиальный" class="m-card-img">
+                            <button class="m-btn t-btn-card t-btn-white">Заказать — от 39 999 ₽</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 

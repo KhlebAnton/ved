@@ -17,3 +17,27 @@
     background-color: var(--color-about-4);
     
 }
+.t-aligin-left {
+    text-align: left;
+}
+.t-btn-card {
+    line-height: 24px;
+    width: 100%;
+    height: 48px;
+    border: none;
+}
+.t-btn-white {
+    background-color: var(--color-white);
+}
+.t-btn-hot {
+    background-color: var(--color-accent);
+    gap: 6px;
+}
+.t-btn-hot::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    background: url('../../img/icons/fire2.svg') 50% / contain no-repeat;
+}

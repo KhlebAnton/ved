@@ -1,0 +1,126 @@
+.m-cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+}
+.m-card {
+   padding: 30px;
+   border-radius: 24px;
+   background-color: var(--color-subcolor); 
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 24px;
+}
+.m-card-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.m-card-hint-bubble {
+    width: 160px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../../img/cards/bubble.svg') 50% / contain no-repeat;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+}
+.m-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex-grow: 1;
+}
+.m-card-title {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 32px;
+}
+.m-card-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+}
+.m-card-subtext {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+}
+.m-card-img {
+    width: 100%;
+    aspect-ratio: 1 / 0.505;
+    object-fit: cover;
+    border-radius: 16px;
+}
+.m-card-hint-hot {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    padding: 6px 16px 6px 12px ;
+    border-radius: 100px;
+    background-color: var(--color-accent);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+}
+.m-card-hint-hot::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    background: url('../../img/icons/fire2.svg') 50% / contain no-repeat;
+}
+
+@media (max-width:1200px) {
+    .m-cards-container {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .m-card {
+        padding: 30px;
+        grid-template-columns: 276px 1fr;
+        gap: 24px 54px;
+    }
+    .m-card-info,
+    .m-card-top {
+        grid-column: 1;
+    }
+    .m-card-img {
+        grid-column: 2;
+        grid-row: 1 / 4;
+        height: 100%;
+    }
+}
+@media (max-width:760px) {
+.m-card {
+    padding: 20px 12px;
+    border-radius: 16px;
+    gap: 16px;
+    grid-template-columns: 1fr;
+}
+.m-card-img ,
+.m-card-info,
+    .m-card-top {
+       grid-column: auto;
+       grid-row: auto;
+    }
+    .m-card-img {
+        width: 100%;
+        aspect-ratio: 1 / 0.676;
+    }
+    .m-card-info {
+        gap: 12px;
+    }
+    .m-card-title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .m-card-subtext,
+    .m-card-text {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}

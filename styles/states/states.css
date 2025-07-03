@@ -26,8 +26,7 @@
 }
 
 @media (max-width:1350px) {
-    .m-highlighted-word.is-rotate-one::before,
-    .m-highlighted-word.is-rotate-two::before {
+    .m-highlighted-word.is-highighlighted-hidden::before {
         opacity: 0;
     }
 }

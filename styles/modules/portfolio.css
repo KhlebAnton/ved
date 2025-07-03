@@ -224,8 +224,6 @@
 
 .m-image-slider .swiper-slide.swiper-slide-active {
     transform: scale(1);
-
-
     opacity: 1;
 }
 
@@ -234,6 +232,7 @@
     height: 247px;
     flex-shrink: 0;
     transform: scale(0.93);
+    transition: transform .8s ease-in, opacity .3s ease;
     opacity: .5;
 }
 

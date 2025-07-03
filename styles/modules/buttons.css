@@ -24,7 +24,7 @@
     background-color: var(--color-accent);
 }
 
-.m-btn-call {
+.m-btn {
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
@@ -41,7 +41,7 @@
     flex-shrink: 0;
 }
 
-.m-btn-call:hover {
+.m-btn:hover {
     background-color: var(--color-accent);
 }
 
@@ -101,7 +101,9 @@
 }
 @media (max-width:760px) {
     
-    
+    .m-btn {
+        font-size: 14px;
+    }
     .m-humburger {
         display: flex;
     }
