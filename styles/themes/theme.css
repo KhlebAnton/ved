@@ -41,3 +41,20 @@
     flex-shrink: 0;
     background: url('../../img/icons/fire2.svg') 50% / contain no-repeat;
 }
+.t-white-text {
+    color: var(--color-white);
+}
+.t-btn-calculator {
+    border: none;
+    background-color: var(--color-white);
+    height: 60px;
+    border-radius: 100px;
+    gap: 8px;
+    padding: 6px 20px 6px 6px;
+}
+@media (max-width:760px) {
+    .t-btn-calculator {
+        height: 48px;
+        
+    }
+}

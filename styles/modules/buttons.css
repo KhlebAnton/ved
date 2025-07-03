@@ -99,6 +99,23 @@
     height: 20px;
     background: url('../../img/menu.svg') 50% / contain no-repeat;
 }
+.m-btn-calculator-icon {
+        width: 48px;
+        flex-shrink: 0;
+        height: 48px;
+        border-radius: 100px;
+        background-color: var(--color-subcolor);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .m-btn-calculator-icon::after {
+        content: '';
+        display: block;
+        width: 24px;
+        height: 24px;
+        background: url('../../img/icons/money-bill.svg') 50% / contain no-repeat;
+    }
 @media (max-width:760px) {
     
     .m-btn {
@@ -106,5 +123,13 @@
     }
     .m-humburger {
         display: flex;
+    }
+    .m-btn-calculator-icon {
+        width: 34px;
+        height: 34px;
+    }
+    .m-btn-calculator-icon::after {
+        width: 20px;
+        height: 20px;
     }
 }

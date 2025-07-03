@@ -52,6 +52,13 @@ a {
     color: inherit;
     text-decoration: none;
 }
+h2 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 120%;
+    text-align: center;
+}
+
 button {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     border: none;
@@ -64,4 +71,22 @@ button {
         --container-padding: 12px;
     }
 
+}
+
+@media (max-width:1200px) {
+    h2 {
+        font-size: 32px;
+
+    }
+
+    h2 br {
+        display: none;
+    }
+}
+
+@media (max-width:760px) {
+
+    h2 {
+        font-size: 16px;
+    }
 }
