@@ -30,9 +30,31 @@
 .m-portfolio-tab.is-active {
     background-color: var(--color-accent);
 }
-
+.m-faq-icon.is-open {
+    transform: rotate(45deg);
+}
+.m-faq-hidden-text.is-open {
+    padding: 0 88px 26px 32px;
+    opacity: 1;
+    transform: translateY(0);
+    height: auto;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
 @media (max-width:1350px) {
     .m-highlighted-word.is-highighlighted-hidden::before {
         opacity: 0;
+    }
+}
+@media (max-width:1200px) {
+   
+    .m-faq-hidden-text.is-open {
+        padding: 0 32px 26px 32px;
+    }
+}
+
+@media (max-width:760px) {
+    
+    .m-faq-hidden-text.is-open {
+        padding: 0 12px 16px 16px;
     }
 }

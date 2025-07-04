@@ -116,6 +116,11 @@
         height: 24px;
         background: url('../../img/icons/money-bill.svg') 50% / contain no-repeat;
     }
+    .m-btn-flex-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
 @media (max-width:760px) {
     
     .m-btn {

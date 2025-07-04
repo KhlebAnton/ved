@@ -23,6 +23,9 @@
      background: var(--color-subcolor);
      border-radius: 16px;
      padding: 32px;
+     min-height: 308px;
+     display: flex;
+     flex-direction: column;
  }
 
  .m-reviews .m-reviews-swiper-slide.swiper-slide {
@@ -45,7 +48,7 @@
      overflow: hidden;
      text-overflow: ellipsis;
      position: relative;
-
+    flex-grow: 1;
      line-height: 1.5;
      max-height: calc(1.5em * 6);
 

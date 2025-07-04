@@ -1,0 +1,29 @@
+.m-nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex-grow: 1;
+}
+.m-footer-nav {
+     display: flex;
+    align-items: center;
+    gap: 24px;
+   
+}
+.m-nav-item {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    transition: color .3s ease;
+}
+
+.m-nav-item:hover {
+    color: var(--color-accent);
+}
+
+@media (max-width:1200px) {
+    
+    .m-nav {
+        gap: 16px;
+    }
+}

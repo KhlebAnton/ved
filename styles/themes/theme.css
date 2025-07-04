@@ -52,9 +52,32 @@
     gap: 8px;
     padding: 6px 20px 6px 6px;
 }
+.t-btn-link {
+    width: fit-content;
+    border: 0;
+    background-color: inherit;
+    align-items: center;
+    gap: 6px;
+    height: 44px;
+}
+
+.t-btn-link::after {
+    width: 20px;
+    height: 20px;
+    content: '';
+    display: block;
+    background: url('../../img/icons/arrow-right.svg') 50% / contain no-repeat;
+}
+
 @media (max-width:760px) {
     .t-btn-calculator {
         height: 48px;
         
     }
+    .t-container-no-padding-mobile {
+    padding: 0;
+}
+.t-btn-link {
+padding: 8px;
+ }
 }
