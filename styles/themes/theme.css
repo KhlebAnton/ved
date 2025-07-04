@@ -156,6 +156,7 @@
 .t-text-center {
     text-align: center;
 }
+
 @media (max-width:760px) {
     .t-btn-calculator {
         height: 48px;

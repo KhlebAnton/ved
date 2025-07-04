@@ -1,6 +1,6 @@
 /* layout.css */
 .l-header {
-    max-width: calc(1296px + var(--container-padding) * 2);
+   
     padding: 16px var(--container-padding);
     margin: 0 auto 15px;
 

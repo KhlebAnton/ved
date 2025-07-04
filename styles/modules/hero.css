@@ -2,8 +2,15 @@
 .m-hero {
     position: relative;
     overflow: hidden;
+    min-height: calc(100vh - 83px);
+    display: flex;
+    flex-direction: column;
 }
-
+.m-hero-container {
+    flex-grow: 1;
+    display: flex;
+    padding: 0 var(--container-padding);
+}
 .m-hero-content {
     min-height: 700px;
     width: 100%;
@@ -11,6 +18,7 @@
     border: 8px solid var(--color-subcolor);
     position: relative;
     margin-bottom: 60px;
+   
 }
 
 .m-hero-bg {
@@ -26,7 +34,7 @@
 
 .m-hero-star {
     position: absolute;
-    top: -8px;
+    bottom: -124px;
     left: 10px;
     width: 816px;
     aspect-ratio: 1 / 1;
@@ -40,7 +48,7 @@
     width: 623px;
     height: 651px;
     left: 107px;
-    top: 101px;
+    bottom: -68px;
     z-index: 1;
     background: url('../../img/alex.png') 50% / contain no-repeat;
 }
@@ -99,7 +107,13 @@
 }
 
 @media (max-width:760px) {
-    
+    .m-hero {
+    position: relative;
+    overflow: hidden;
+    min-height: calc(100vh - 12px);
+    display: flex;
+    flex-direction: column;
+}
    
     .m-hero-content {
         min-height: 410px;
@@ -108,13 +122,13 @@
         border-radius: 16px;
     }
     .m-hero-img {
-        top: 109px;
+        bottom: -26px;
         left: -53px;
         width: 310.94px;
         height: 325px;
     }
         .m-hero-star {
-        top: 69px;
+       bottom: -63px;
         left: -119px;
         width: 404px;
     }
