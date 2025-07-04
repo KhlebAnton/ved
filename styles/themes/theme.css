@@ -2,37 +2,46 @@
 .t-flex-grow-up {
     flex-grow: 1;
 }
+
 .t-color-about-1 {
     background-color: var(--color-about-1);
 }
+
 .t-color-about-2 {
     background-color: var(--color-about-2);
-    
+
 }
+
 .t-color-about-3 {
     background-color: var(--color-about-3);
-    
+
 }
+
 .t-color-about-4 {
     background-color: var(--color-about-4);
-    
+
 }
+
 .t-aligin-left {
     text-align: left;
 }
+
 .t-btn-card {
     line-height: 24px;
     width: 100%;
     height: 48px;
     border: none;
 }
+
 .t-btn-white {
     background-color: var(--color-white);
 }
+
 .t-btn-hot {
     background-color: var(--color-accent);
     gap: 6px;
 }
+
 .t-btn-hot::before {
     content: '';
     display: block;
@@ -41,9 +50,11 @@
     flex-shrink: 0;
     background: url('../../img/icons/fire2.svg') 50% / contain no-repeat;
 }
+
 .t-white-text {
     color: var(--color-white);
 }
+
 .t-btn-calculator {
     border: none;
     background-color: var(--color-white);
@@ -52,6 +63,7 @@
     gap: 8px;
     padding: 6px 20px 6px 6px;
 }
+
 .t-btn-link {
     width: fit-content;
     border: 0;
@@ -69,15 +81,92 @@
     background: url('../../img/icons/arrow-right.svg') 50% / contain no-repeat;
 }
 
+.t-color-accent {
+    background-color: var(--color-accent);
+    border: 0;
+}
+
+.t-label-dropdown::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    background: url('../../img/icons/dropdown.svg') 50% / contain no-repeat;
+}
+
+.t-flex-column {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.t-icon-calendar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.t-icon-calendar::before {
+    width: 24px;
+    height: 24px;
+    content: '';
+    display: block;
+    background: url('../../img/icons/calendar.svg') 50% / contain no-repeat;
+}
+
+.t-icon-clock {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.t-icon-clock::before {
+    width: 24px;
+    height: 24px;
+    content: '';
+    display: block;
+    background: url('../../img/icons/time-clock.svg') 50% / contain no-repeat;
+}
+
+.t-white-label {
+    padding: 8px 16px;
+    background-color: var(--color-white);
+    justify-content: start;
+    gap: 6px;
+    flex-direction: row-reverse;
+    border-radius: 12px;
+}
+.t-checked {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.t-checked::after {
+    width: 16px;
+    height: 16px;
+    display: block;
+    content: '';
+    background: url('../../img/icons/check.svg') 50% / contain no-repeat;
+    flex-shrink: 0;
+}
+.t-label-error {
+    border: 1px solid var(--color-red);
+}
+.t-text-center {
+    text-align: center;
+}
 @media (max-width:760px) {
     .t-btn-calculator {
         height: 48px;
-        
+
     }
+
     .t-container-no-padding-mobile {
-    padding: 0;
-}
-.t-btn-link {
-padding: 8px;
- }
+        padding: 0;
+    }
+
+    .t-btn-link {
+        padding: 8px;
+    }
 }

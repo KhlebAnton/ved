@@ -29,6 +29,8 @@
     <link rel="stylesheet" href="./styles/modules/faqs.css">
     <link rel="stylesheet" href="./styles/modules/footer.css">
     <link rel="stylesheet" href="./styles/modules/develop.css">
+    <link rel="stylesheet" href="./styles/modules/calculator.css">
+    <link rel="stylesheet" href="./styles/modules/modal.css">
     <!-- states -->
     <link rel="stylesheet" href="./styles/states/states.css">
     <!-- themes -->
@@ -61,8 +63,391 @@
                 </a>
             </nav>
             <div class="m-menu-bottom">
-                <button class="m-btn t-flex-grow-up">Заказать звонок</button>
+                <button class="m-btn t-flex-grow-up" data-click="call">Заказать звонок</button>
                 <a href="#" class="m-btn-tg"></a>
+            </div>
+        </div>
+    </div>
+    <div class="l-modal-overlay" id="modalCall">
+        <div class="m-modal">
+            <div class="m-modal-close"></div>
+            <div class="m-modal-title">
+                Позвоните мне
+            </div>
+            <p class="m-modal-text">
+                Заполните данные и мы свяжемся с вами в ближайшее время.
+            </p>
+           
+            <div class="m-calculator-inputs-flex">
+                <label class="m-calculator-label">
+                    <input type="text" name="contact" required placeholder="Telegram, What’s App, номер телефона">
+                </label>
+                <label class="m-calculator-label">
+                    <input type="text" name="name" required placeholder="Ваше имя">
+                </label>
+            </div>
+
+            <label class="m-calculator-label">
+                <textarea name="comment" placeholder="Меня интересует, а можно ли..."></textarea>
+            </label>
+            <button class="m-btn t-color-accent">Отправить</button>
+        </div>
+    </div>
+    <div class="l-modal-overlay" id="modalSuccess">
+        <div class="m-modal">
+            <div class="m-modal-close"></div>
+            <div class="m-modal-title t-text-center">
+                Заявка успешно создана!
+            </div>
+            <p class="m-modal-text t-text-center">
+                Мы свяжемся с вами в ближайшее время.
+            </p>
+        </div>
+    </div>
+    <div class="l-modal-overlay" id="modalCalculator">
+        <div class="m-modal">
+            <div class="m-modal-close"></div>
+            <div class="m-calculator">
+                <div class="m-modal-title">
+                    Узнайте стоимость
+                </div>
+                <div class="m-calculator-progress">
+                    <div class="m-calculator-progress-bar">
+                        <div class="m-calculator-progress-line" style="width: 25%;"></div>
+                    </div>
+                    <div class="m-calculator-progress-count">
+                        <span class="m-calculator-step-count">1</span>
+                        <span> из </span>
+                        <span class="m-calculator-step-count-all">4</span>
+                    </div>
+                </div>
+                <div class="m-calculator-step-container">
+                    <div class="m-calculator-step is-open" data-step="1">
+                        <div class="m-calculator-step-title">
+                            Кто вам нужен?
+                        </div>
+                        <div class="m-calculator-inputs-flex">
+                            <label class="m-calculator-label">
+                                <span>
+                                    Ведущий
+                                </span>
+                                <input type="radio" name="who" value="Ведущий">
+                                <div class="radio-marker"></div>
+                            </label>
+                            <label class="m-calculator-label">
+                                <span>
+                                    Организатор
+                                </span>
+                                <input type="radio" name="who" value="Организатор">
+                                <div class="radio-marker"></div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="m-calculator-step" data-step="2">
+                        <div class="m-calculator-step-title">
+                            Дата мероприятия
+                        </div>
+                        <div class="m-calculator-inputs-grid">
+                            <label class="m-calculator-label t-label-dropdown t-grid-column" id="dateDropdown">
+                                <span class="m-calculator-dropdown-selected t-icon-calendar">Выберите дату</span>
+                                <div class="m-calculator-dropdown-list m-datepicker ">
+                                    <div class="m-datepicker-header">
+                                        <button class="m-datepicker-prev" disabled>
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <div class="m-datepicker-title">Май 2023</div>
+                                        <button class="m-datepicker-next">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="m-datepicker-days-wrapper">
+                                        <div class="m-datepicker-weekdays">
+                                            <div>Пн</div>
+                                            <div>Вт</div>
+                                            <div>Ср</div>
+                                            <div>Чт</div>
+                                            <div>Пт</div>
+                                            <div>Сб</div>
+                                            <div>Вс</div>
+                                        </div>
+                                        <div class="m-datepicker-days"></div>
+                                    </div>
+
+                                </div>
+                            </label>
+                            <div class="m-time-inputs-container">
+                                <!-- Начало мероприятия -->
+                                <label class="m-calculator-label t-label-dropdown" id="startTimeDropdown">
+                                    <span class="m-calculator-dropdown-selected t-icon-clock">Начало</span>
+                                    <div class="m-calculator-dropdown-list m-timepicker">
+                                        <div class="m-timepicker-title">Начало мероприятия</div>
+                                        <div class="m-timepicker-controls">
+                                            <div class="m-timepicker-section">
+                                                <div class="m-timepicker-arrow up" data-action="increment-hour"></div>
+                                                <div class="m-timepicker-wrapper">
+                                                    <input type="text" class="m-timepicker-value hour" value="12"
+                                                        maxlength="2">
+                                                    <span> ч</span>
+                                                </div>
+
+                                                <div class="m-timepicker-arrow down" data-action="decrement-hour">
+                                                </div>
+                                            </div>
+
+                                            <div class="m-timepicker-section">
+                                                <div class="m-timepicker-arrow up" data-action="increment-minute">
+                                                </div>
+                                                <div class="m-timepicker-wrapper">
+                                                    <input type="text" class="m-timepicker-value minute" value="00"
+                                                        maxlength="2">
+                                                    <span> мин</span>
+                                                </div>
+
+                                                <div class="m-timepicker-arrow down" data-action="decrement-minute">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="m-timepicker-footer">
+                                            <button class="m-btn t-btn-white cancel">Назад</button>
+                                            <button class="m-btn t-color-accent apply">Принять</button>
+                                        </div>
+                                    </div>
+                                </label>
+
+                                <!-- Конец мероприятия -->
+                                <label class="m-calculator-label t-label-dropdown" id="endTimeDropdown">
+                                    <span class="m-calculator-dropdown-selected t-icon-clock">Конец</span>
+                                    <div class="m-calculator-dropdown-list m-timepicker">
+                                        <div class="m-timepicker-title">Конец мероприятия</div>
+                                        <div class="m-timepicker-controls">
+                                            <div class="m-timepicker-section">
+                                                <div class="m-timepicker-arrow up" data-action="increment-hour"></div>
+                                                <div class="m-timepicker-wrapper">
+                                                    <input type="text" class="m-timepicker-value hour" value="13"
+                                                        maxlength="2">
+                                                    <span> ч</span>
+                                                </div>
+
+                                                <div class="m-timepicker-arrow down" data-action="decrement-hour">
+                                                </div>
+                                            </div>
+
+                                            <div class="m-timepicker-section">
+                                                <div class="m-timepicker-arrow up" data-action="increment-minute">
+                                                </div>
+                                                <div class="m-timepicker-wrapper">
+                                                    <input type="text" class="m-timepicker-value minute" value="00"
+                                                        maxlength="2">
+                                                    <span>мин</span>
+                                                </div>
+
+                                                <div class="m-timepicker-arrow down" data-action="decrement-minute">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="m-timepicker-footer">
+                                            <button class="m-btn t-btn-white cancel">Назад</button>
+                                            <button class="m-btn t-color-accent apply">Принять</button>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+
+                        </div>
+                        <div class="m-calculator-step-title">
+                            Тип мероприятия
+                        </div>
+                        <div class="m-calculator-inputs-flex">
+                            <label class="m-calculator-label t-label-dropdown" id="dropDownType">
+                                <span class="m-calculator-dropdown-selected">Корпоратив</span>
+                                <div class="m-calculator-dropdown-list">
+                                    <div class="m-calculator-dropdown-list-item is-active" data-value="Корпоратив">
+                                        Корпоратив
+                                    </div>
+                                    <div class="m-calculator-dropdown-list-item" data-value="День рождения">
+                                        День рождения
+                                    </div>
+                                    <div class="m-calculator-dropdown-list-item" data-value="Свадьба">
+                                        Свадьба
+                                    </div>
+                                    <div class="m-calculator-dropdown-list-item" data-value="Фестиваль">
+                                        Фестиваль
+                                    </div>
+                                    <div class="m-calculator-dropdown-list-item" data-value="Поминки">
+                                        Поминки
+                                    </div>
+                                </div>
+                            </label>
+
+                        </div>
+                    </div>
+                    <div class="m-calculator-step" data-step="3">
+                        <div class="m-calculator-step-title">
+                            Дополнительные услуги:
+                        </div>
+                        <div class="m-calculator-inputs-flex">
+                            <div class="m-calculator-add-item">
+                                <div class="m-calculator-add-item-top">
+                                    <span class="m-calculator-add-item-title">
+                                        Музыкальная группа “The Band”
+                                    </span>
+                                </div>
+                                <div class="m-calculator-add-item-hidden">
+                                    <div class="m-calculator-add-item-info">
+                                        Визуализируйте времяпрепровождение, пока я помогаю вам его воплотить
+                                    </div>
+                                    <div class="m-calculator-add-item-choise">
+                                        <p class="m-calculator-add-item-info">
+                                            Выберите тип программы:
+                                        </p>
+                                        <div class="m-calculator-add-item-input-wrapper">
+                                            <label class="m-calculator-label t-white-label">
+                                                <span>
+                                                    Программа на 2 часа
+                                                </span>
+                                                <input type="radio" name="music" value="2 часа музыка">
+                                                <div class="radio-marker"></div>
+                                            </label>
+                                            <label class="m-calculator-label t-white-label">
+                                                <span>
+                                                    Программа на 1 час
+                                                </span>
+                                                <input type="radio" name="music" value="1 час музыка">
+                                                <div class="radio-marker"></div>
+                                            </label>
+                                            <label class="m-calculator-label t-white-label">
+                                                <span>
+                                                    Программа на 30 минут
+                                                </span>
+                                                <input type="radio" name="music" value="30 мин музыка">
+                                                <div class="radio-marker"></div>
+                                            </label>
+                                        </div>
+                                        <button class="m-btn t-btn-white">Отказаться</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="m-calculator-add-item">
+                                <div class="m-calculator-add-item-top">
+                                    <span class="m-calculator-add-item-title">
+                                        Съёмка и монтаж видео
+                                    </span>
+                                </div>
+                                <div class="m-calculator-add-item-hidden">
+                                    <div class="m-calculator-add-item-info">
+                                        Визуализируйте времяпрепровождение, пока я помогаю вам его воплотить
+                                    </div>
+                                    <div class="m-calculator-add-item-choise">
+                                        <p class="m-calculator-add-item-info">
+                                            Выберите тип программы:
+                                        </p>
+                                        <div class="m-calculator-add-item-input-wrapper">
+                                            <label class="m-calculator-label t-white-label">
+                                                <span>
+                                                    Программа на 2 часа
+                                                </span>
+                                                <input type="radio" name="video" value="2 часа Видео">
+                                                <div class="radio-marker"></div>
+                                            </label>
+                                            <label class="m-calculator-label t-white-label">
+                                                <span>
+                                                    Программа на 1 час
+                                                </span>
+                                                <input type="radio" name="video" value="1 час Видео">
+                                                <div class="radio-marker"></div>
+                                            </label>
+                                            <label class="m-calculator-label t-white-label">
+                                                <span>
+                                                    Программа на 30 минут
+                                                </span>
+                                                <input type="radio" name="video" value="30 мин Видео">
+                                                <div class="radio-marker"></div>
+                                            </label>
+                                        </div>
+                                        <button class="m-btn t-btn-white">Отказаться</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="m-calculator-add-item">
+                                <div class="m-calculator-add-item-top">
+                                    <span class="m-calculator-add-item-title">
+                                        Фотограф
+                                    </span>
+                                </div>
+                                <div class="m-calculator-add-item-hidden ">
+                                    <div class="m-calculator-add-item-info">
+                                        Визуализируйте времяпрепровождение, пока я помогаю вам его воплотить
+                                    </div>
+                                    <div class="m-calculator-add-item-choise">
+                                        <p class="m-calculator-add-item-info">
+                                            Выберите тип программы:
+                                        </p>
+                                        <div class="m-calculator-add-item-input-wrapper">
+                                            <label class="m-calculator-label t-white-label">
+                                                <span>
+                                                    Программа на 2 часа
+                                                </span>
+                                                <input type="radio" name="photo" value="2 часа Фото">
+                                                <div class="radio-marker"></div>
+                                            </label>
+                                            <label class="m-calculator-label t-white-label">
+                                                <span>
+                                                    Программа на 1 час
+                                                </span>
+                                                <input type="radio" name="photo" value="1 час Фото">
+                                                <div class="radio-marker"></div>
+                                            </label>
+                                            <label class="m-calculator-label t-white-label">
+                                                <span>
+                                                    Программа на 30 минут
+                                                </span>
+                                                <input type="radio" name="photo" value="30 мин Фото">
+                                                <div class="radio-marker"></div>
+                                            </label>
+                                        </div>
+                                        <button class="m-btn t-btn-white">Отказаться</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m-calculator-step" data-step="4">
+                        <div class="m-calculator-step-title">
+                            Контактные данные:
+                        </div>
+
+                        <div class="m-calculator-inputs-flex">
+                            <label class="m-calculator-label">
+                                <input type="text" name="contact" required
+                                    placeholder="Telegram, What’s App, номер телефона">
+                            </label>
+                            <label class="m-calculator-label">
+                                <input type="text" name="name" required placeholder="Ваше имя">
+                            </label>
+                        </div>
+
+                        <div class="m-calculator-step-title">
+                            Дополнительный комментарий:
+                        </div>
+
+                        <label class="m-calculator-label">
+                            <textarea name="comment" placeholder="Меня интересует, а можно ли..."></textarea>
+                        </label>
+                        <span class="m-calculator-subtext">*окончательная стоимость будет определна исходя из ваших пожеланий</span>
+                    </div>
+                </div>
+                <div class="m-calculator-nav">
+                    <button class="m-btn">Назад</button>
+                    <button class="m-btn t-color-accent">Далее</button>
+                </div>
             </div>
         </div>
     </div>
@@ -83,7 +468,7 @@
                     Вопросы и ответы
                 </a>
             </nav>
-            <button class="m-btn ">Заказать звонок</button>
+            <button class="m-btn " data-click="call">Заказать звонок</button>
             <a href="#" class="m-btn-tg"></a>
         </div>
         <button class="m-humburger"></button>
@@ -520,7 +905,7 @@
                         <h2 class="t-white-text t-aligin-left">
                             Узнайте стоимость вашего мероприятия и забронируйте дату
                         </h2>
-                        <button class="m-btn t-btn-calculator">
+                        <button class="m-btn t-btn-calculator" data-click="calculator">
                             <div class="m-btn-calculator-icon"></div>
                             Калькулятор стоимости
                         </button>
@@ -797,7 +1182,7 @@
                         </a>
                     </nav>
                     <div class="m-btn-flex-row">
-                        <button class="m-btn t-btn-white">Заказать звонок</button>
+                        <button class="m-btn t-btn-white" data-click="call">Заказать звонок</button>
                         <a href="#" class="m-btn-tg t-btn-white"></a>
                     </div>
 
@@ -810,7 +1195,7 @@
                         Privacy
                     </a>
                     <span>
- — 
+                        —
                     </span>
                     <a href="#" class="m-footer-copyright-link">
                         Terms
@@ -822,12 +1207,18 @@
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
+    <script src="./scripts/scroll.js"></script>
+
     <script src="./scripts/header.js"></script>
+    <script src="./scripts/modalSucces.js"></script>
     <script src="./scripts/marquee.js"></script>
     <script src="./scripts/video-player.js"></script>
     <script src="./scripts/portfolio.js"></script>
     <script src="./scripts/reviews.js"></script>
     <script src="./scripts/faqs.js"></script>
+    <script src="./scripts/calculator.js"></script>
+    <script src="./scripts/callModal.js"></script>
+
 </body>
 
 </html>

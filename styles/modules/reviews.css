@@ -48,7 +48,6 @@
      overflow: hidden;
      text-overflow: ellipsis;
      position: relative;
-    flex-grow: 1;
      line-height: 1.5;
      max-height: calc(1.5em * 6);
 
@@ -95,7 +94,9 @@
  .m-reviews-info {
      display: flex;
      flex-direction: column;
+     justify-content: end;
      margin-top: 28px;
+     flex-grow: 2;
      gap: 8px;
  }
 

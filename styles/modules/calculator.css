@@ -1,0 +1,442 @@
+.m-calculator {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.m-calculator-progress {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.m-calculator-progress-count {
+    font-size: 14px;
+    line-height: 18px;
+    flex-shrink: 0;
+    font-weight: 600;
+}
+
+.m-calculator-progress-bar {
+    flex-grow: 1;
+    height: 6px;
+    border-radius: 100px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+}
+
+.m-calculator-progress-bar::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-accent);
+    opacity: .2;
+}
+
+.m-calculator-progress-line {
+    height: 100%;
+    background-color: var(--color-accent);
+    border-radius: 100px;
+}
+
+.m-calculator-step {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    display: none;
+}
+.m-calculator-step.is-open {
+    display: flex;
+}
+.m-calculator-step-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.m-calculator-step-title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.m-calculator-inputs-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.m-calculator-label {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 12px;
+    background-color: var(--color-subcolor);
+    padding: 12px 16px 12px 20px;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+    border: 1px solid var(--color-subcolor);
+
+}
+
+.m-calculator-nav {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 12px;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-subcolor);
+}
+
+.m-calculator-dropdown-list {
+    position: absolute;
+    z-index: 10;
+    top: calc(100% + 4px);
+    left: 0;
+    width: 100%;
+    padding: 12px 0;
+    border-radius: 12px;
+    background-color: var(--color-subcolor);
+    display: none;
+    flex-direction: column;
+    font: 4px;
+}
+
+.m-calculator-dropdown-list-item {
+    padding: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.m-calculator-dropdown-list-item:hover {
+    background-color: var(--color-accent);
+
+}
+
+.m-calculator-dropdown-list-item.is-active {
+    background-color: var(--color-accent);
+}
+
+.m-calculator-dropdown-list.is-open {
+    display: flex;
+}
+
+.m-datepicker {
+    width: 100%;
+    padding: 16px;
+    padding-bottom: 20px;
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.m-datepicker.is-open {
+    display: flex;
+}
+
+.m-datepicker-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.m-datepicker-title {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.m-datepicker-prev,
+.m-datepicker-next {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    color: var(--color-text);
+}
+
+.m-datepicker-prev:disabled,
+.m-datepicker-next:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.m-datepicker-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 17px;
+
+    opacity: .5;
+
+}
+
+.m-datepicker-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+
+}
+
+.m-datepicker-days-wrapper {
+    border-radius: 16px;
+    padding: 12px;
+    background-color: var(--color-white);
+}
+
+.m-datepicker-day {
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 17px;
+    cursor: pointer;
+
+    position: relative;
+    z-index: 1;
+}
+
+
+
+.m-datepicker-day:hover::after {
+    content: '';
+    background-color: var(--color-accent);
+    width: 25px;
+    height: 25px;
+    content: '';
+    position: absolute;
+    border-radius: 100px;
+    top: 50%;
+    opacity: 0.5;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+
+}
+
+.m-datepicker-day.is-disabled {
+
+    opacity: .5;
+    pointer-events: none;
+}
+
+.m-datepicker-day.is-selected::after {
+    background-color: var(--color-accent);
+    width: 25px;
+    height: 25px;
+    content: '';
+    position: absolute;
+    border-radius: 100px;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+
+}
+
+.m-datepicker-day.is-today {
+    position: relative;
+    pointer-events: none;
+    opacity: .5;
+}
+
+.m-calculator-inputs-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 6px;
+}
+
+.m-time-inputs-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+
+
+
+}
+
+.m-timepicker {
+    width: 100%;
+    padding: 14px 16px;
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.m-timepicker.is-open {
+    display: flex;
+}
+
+.m-timepicker-title {
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.m-timepicker-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--color-white);
+    border-radius: 16px;
+    gap: 10px;
+}
+
+.m-timepicker-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.m-timepicker-arrow {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    user-select: none;
+    background: url('../../img/icons/arrow-up.svg') 50% / contain no-repeat;
+}
+
+.m-timepicker-arrow.down {
+    transform: scale(1, -1);
+}
+
+.m-timepicker-arrow:hover {
+    color: var(--color-accent);
+}
+
+input.m-timepicker-value {
+    width: 2em;
+    text-align: center;
+    font-size: 16px;
+    border: 0;
+    background-color: inherit;
+    border-radius: 4px;
+    padding: 4px;
+    margin: 4px 0;
+    font-size: 14px;
+
+}
+
+input.m-timepicker-value:focus {
+    outline: none;
+}
+
+.m-timepicker-separator {
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 12px;
+}
+
+.m-timepicker-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+}
+
+.m-timepicker-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.m-calculator-add-item-top {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.m-calculator-add-item-top::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    background: url('../../img/icons/arrow-up.svg') 50% / contain no-repeat;
+    opacity: .5;
+    transform: rotate(180deg);
+}
+
+.m-calculator-add-item {
+    padding: 14px 20px;
+    border-radius: 12px;
+    background-color: var(--color-subcolor);
+
+}
+
+.m-calculator-add-item-title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.m-calculator-add-item-hidden {
+    padding-top: 12px;
+    display: none;
+}
+
+.m-calculator-add-item-hidden.is-open {
+    display: block;
+}
+
+.m-calculator-add-item-info {
+    max-width: 473px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.m-calculator-add-item-choise {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-grey);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.m-calculator-add-item-input-wrapper {
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+.m-calculator-subtext {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 17px;
+}
+@media (max-width:600px) {
+    .m-time-inputs-container {
+        grid-template-columns: 1fr;
+    }
+
+   
+}
+@media (max-width:500px) {
+   
+
+    .m-calculator-add-item-input-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+    }
+}

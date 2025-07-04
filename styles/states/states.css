@@ -40,6 +40,16 @@
     height: auto;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
+.l-modal-overlay.is-open {
+ opacity: 1;
+    pointer-events: all;
+}
+
+.m-calculator-add-item-top.is-open::after {
+    
+    opacity: 1;
+    transform: rotate(0deg);
+}
 @media (max-width:1350px) {
     .m-highlighted-word.is-highighlighted-hidden::before {
         opacity: 0;
