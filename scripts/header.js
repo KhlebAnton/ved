@@ -28,6 +28,5 @@ function setRealVH() {
 // Инициализация
 setRealVH();
 
-// Обновляем при ресайзе и изменении ориентации
-window.addEventListener('resize', setRealVH);
+
 window.addEventListener('orientationchange', setRealVH);
