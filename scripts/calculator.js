@@ -718,8 +718,8 @@ document.addEventListener('DOMContentLoaded', function () {
             return data;
         }
     }
-const modalElement = document.getElementById('modalCalculator');
-initCalculatorModal(modalElement);
+    const modalElement = document.getElementById('modalCalculator');
+    initCalculatorModal(modalElement);
 
 
 });
