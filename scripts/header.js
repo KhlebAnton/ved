@@ -19,14 +19,3 @@ function closeMenu() {
 menuLinks.forEach(link => {
     link.addEventListener('click', closeMenu)
 })
-// Устанавливаем CSS-переменную с актуальной высотой
-function setRealVH() {
-  const vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--real-vh', `${vh}px`);
-}
-
-// Инициализация
-setRealVH();
-
-
-window.addEventListener('orientationchange', setRealVH);

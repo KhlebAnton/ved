@@ -1,11 +1,9 @@
 /* _hero.css */
-:root {
-     --real-vh: 1vh;
-}
+
 .m-hero {
     position: relative;
     overflow: hidden;
-    min-height: calc(var(--real-vh, 1vh) * 100 - 83px);
+    min-height: calc(100vh - 83px);
 
     display: flex;
     flex-direction: column;
@@ -114,7 +112,7 @@
     .m-hero {
     position: relative;
     overflow: hidden;
-   min-height: calc(var(--real-vh, 1vh) * 100 - 12px);
+   min-height: calc(100vh - 12px);
     
     display: flex;
     flex-direction: column;
